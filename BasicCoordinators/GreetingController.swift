@@ -10,7 +10,7 @@ import UIKit
 
 class GreetingController: UIViewController, Storyboarded {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: GreetingCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +18,8 @@ class GreetingController: UIViewController, Storyboarded {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didFinishGreeting()
+    }
 }

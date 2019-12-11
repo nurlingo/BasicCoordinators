@@ -16,14 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-5v-DrS">
-                                <rect key="frame" x="179" y="423" width="56" height="30"/>
+                                <rect key="frame" x="166" y="413" width="82" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Farewell"/>
                                 <connections>
                                     <action selector="farewellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fo5-1u-HiM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhR-QT-hTK">
-                                <rect key="frame" x="173.5" y="353" width="67" height="30"/>
+                                <rect key="frame" x="158.5" y="333" width="97" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Greetings"/>
                                 <connections>
                                     <action selector="greetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yd7-Zk-SaD"/>

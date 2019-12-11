@@ -18,6 +18,8 @@
 		5C39CC3E23A1921500D73A8D /* GreetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39CC3D23A1921500D73A8D /* GreetingController.swift */; };
 		5C39CC4023A1923500D73A8D /* FarewellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39CC3F23A1923500D73A8D /* FarewellController.swift */; };
 		5C39CC4223A1925D00D73A8D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39CC4123A1925D00D73A8D /* MainCoordinator.swift */; };
+		5C39CC4423A19D3100D73A8D /* GreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39CC4323A19D3100D73A8D /* GreetingCoordinator.swift */; };
+		5C39CC4623A19E4300D73A8D /* FarewellCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39CC4523A19E4300D73A8D /* FarewellCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5C39CC3D23A1921500D73A8D /* GreetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingController.swift; sourceTree = "<group>"; };
 		5C39CC3F23A1923500D73A8D /* FarewellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarewellController.swift; sourceTree = "<group>"; };
 		5C39CC4123A1925D00D73A8D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5C39CC4323A19D3100D73A8D /* GreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingCoordinator.swift; sourceTree = "<group>"; };
+		5C39CC4523A19E4300D73A8D /* FarewellCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarewellCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				5C39CC2523A190CE00D73A8D /* AppDelegate.swift */,
 				5C39CC2723A190CE00D73A8D /* SceneDelegate.swift */,
 				5C39CC4123A1925D00D73A8D /* MainCoordinator.swift */,
+				5C39CC4323A19D3100D73A8D /* GreetingCoordinator.swift */,
+				5C39CC4523A19E4300D73A8D /* FarewellCoordinator.swift */,
 				5C39CC2923A190CE00D73A8D /* HomeController.swift */,
 				5C39CC3D23A1921500D73A8D /* GreetingController.swift */,
 				5C39CC3F23A1923500D73A8D /* FarewellController.swift */,
@@ -159,6 +165,8 @@
 				5C39CC3A23A190DF00D73A8D /* Coordinator.swift in Sources */,
 				5C39CC2A23A190CE00D73A8D /* HomeController.swift in Sources */,
 				5C39CC3C23A1912A00D73A8D /* Storyboarded.swift in Sources */,
+				5C39CC4623A19E4300D73A8D /* FarewellCoordinator.swift in Sources */,
+				5C39CC4423A19D3100D73A8D /* GreetingCoordinator.swift in Sources */,
 				5C39CC2623A190CE00D73A8D /* AppDelegate.swift in Sources */,
 				5C39CC2823A190CE00D73A8D /* SceneDelegate.swift in Sources */,
 			);

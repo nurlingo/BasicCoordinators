@@ -11,7 +11,7 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     
-    var coordinators = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -20,20 +20,35 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let vc = HomeController.instantiate()
+        vc.title = "Home"
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func childDidFinish(_ child: Coordinator?) {
+        
+        for (index, coordinator) in
+            childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+        
+    }
+    
     func greet() {
-        let vc = GreetingController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = GreetingCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
     func sayFarewell() {
-        let vc = FarewellController.instantiate()
-        vc.title = "Farewell"
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = FarewellCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
+
 }
