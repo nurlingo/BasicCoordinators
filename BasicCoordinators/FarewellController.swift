@@ -17,10 +17,4 @@ class FarewellController: UIViewController, Storyboarded {
 
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinishSayingFarewell()
-    }
-
 }
