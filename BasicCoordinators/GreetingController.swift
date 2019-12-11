@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GreetingController.swift
 //  BasicCoordinators
 //
 //  Created by Nursultan on 12.12.2019.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GreetingController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-

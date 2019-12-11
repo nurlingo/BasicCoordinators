@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" id="BYZ-38-t0r" customClass="HomeController" customModule="BasicCoordinators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-5v-DrS">
+                                <rect key="frame" x="179" y="423" width="56" height="30"/>
+                                <state key="normal" title="Farewell"/>
+                                <connections>
+                                    <action selector="farewellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fo5-1u-HiM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhR-QT-hTK">
+                                <rect key="frame" x="173.5" y="353" width="67" height="30"/>
+                                <state key="normal" title="Greetings"/>
+                                <connections>
+                                    <action selector="greetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yd7-Zk-SaD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q7c-5v-DrS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SUZ-eE-JQl"/>
+                            <constraint firstItem="AhR-QT-hTK" firstAttribute="centerX" secondItem="q7c-5v-DrS" secondAttribute="centerX" id="fa9-ud-IEX"/>
+                            <constraint firstItem="q7c-5v-DrS" firstAttribute="top" secondItem="AhR-QT-hTK" secondAttribute="bottom" constant="40" id="fpO-xj-Atm"/>
+                            <constraint firstItem="q7c-5v-DrS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lG8-nP-y1a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+        <!--Greeting Controller-->
+        <scene sceneID="Q6J-rb-QTq">
+            <objects>
+                <viewController storyboardIdentifier="GreetingController" id="obx-JH-UZV" customClass="GreetingController" customModule="BasicCoordinators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kTT-S5-tZK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYK-EQ-aH5">
+                                <rect key="frame" x="55" y="371.5" width="304.5" height="81.5"/>
+                                <string key="text">As-Salaamu 3alaikum!
+
+Greetings to thee, oh friend! 
+Good is the hour which brings you here.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nYK-EQ-aH5" firstAttribute="bottom" secondItem="TOD-10-zxy" secondAttribute="centerY" id="7vy-Uv-G3k"/>
+                            <constraint firstItem="nYK-EQ-aH5" firstAttribute="centerX" secondItem="TOD-10-zxy" secondAttribute="centerX" id="jsn-3R-1PC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TOD-10-zxy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Hd-TL-8XV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="126.5625"/>
+        </scene>
+        <!--Farewell Controller-->
+        <scene sceneID="sS7-4q-z26">
+            <objects>
+                <viewController storyboardIdentifier="FarewellController" id="6aq-6H-7wd" customClass="FarewellController" customModule="BasicCoordinators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wep-fG-eJU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-Gx-r5D">
+                                <rect key="frame" x="86.5" y="367" width="241" height="86"/>
+                                <string key="text">Fare thee well, and if for ever, 
+still for ever, fare thee well.
+  
+As-Salaamu 3alaikum!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="psJ-Gx-r5D" firstAttribute="centerX" secondItem="bIH-Vt-doO" secondAttribute="centerX" id="2b6-47-WTG"/>
+                            <constraint firstItem="psJ-Gx-r5D" firstAttribute="bottom" secondItem="bIH-Vt-doO" secondAttribute="centerY" id="zoo-yf-d5e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bIH-Vt-doO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHD-8o-aQq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="127"/>
         </scene>
     </scenes>
 </document>
