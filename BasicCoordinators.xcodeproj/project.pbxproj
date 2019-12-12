@@ -78,14 +78,22 @@
 				5C39CC2923A190CE00D73A8D /* HomeController.swift */,
 				5C39CC3D23A1921500D73A8D /* GreetingController.swift */,
 				5C39CC3F23A1923500D73A8D /* FarewellController.swift */,
-				5C39CC3923A190DF00D73A8D /* Coordinator.swift */,
-				5C39CC3B23A1912A00D73A8D /* Storyboarded.swift */,
+				5CFBC7C923A2ECD500E3606D /* Protocols */,
 				5C39CC2B23A190CE00D73A8D /* Main.storyboard */,
 				5C39CC2E23A190CF00D73A8D /* Assets.xcassets */,
 				5C39CC3023A190CF00D73A8D /* LaunchScreen.storyboard */,
 				5C39CC3323A190CF00D73A8D /* Info.plist */,
 			);
 			path = BasicCoordinators;
+			sourceTree = "<group>";
+		};
+		5CFBC7C923A2ECD500E3606D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5C39CC3923A190DF00D73A8D /* Coordinator.swift */,
+				5C39CC3B23A1912A00D73A8D /* Storyboarded.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

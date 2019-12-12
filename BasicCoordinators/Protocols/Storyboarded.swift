@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol Storyboarded {
+    var coordinator: Coordinator? { get set }
     static func instantiate() -> Self
 }
 

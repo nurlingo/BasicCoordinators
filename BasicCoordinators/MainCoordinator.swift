@@ -11,7 +11,7 @@ import UIKit
 
 class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
-    var childCoordinators = [Coordinator]()
+    var childCoordinators = [String:Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -26,29 +26,19 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func childDidFinish(_ child: Coordinator?) {
-        
-        for (index, coordinator) in
-            childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
-        }
-        
+    func childDidFinish(_ childId: String) {
+        childCoordinators.removeValue(forKey: childId)
     }
     
     func greet() {
         let child = GreetingCoordinator(navigationController: navigationController)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
+        childCoordinators[String(describing: child.self)] = child
         child.start()
     }
     
     func sayFarewell() {
         let child = FarewellCoordinator(navigationController: navigationController)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
+        childCoordinators[String(describing: child.self)] = child
         child.start()
     }
         
@@ -62,11 +52,9 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             return
         }
         
-        if let childVC = fromViewController as? GreetingController {
-            childDidFinish(childVC.coordinator)
-        } else if let childVC = fromViewController as? FarewellController {
-            childDidFinish(childVC.coordinator)
-        }
+        guard let childVC = fromViewController as? Storyboarded, let coordinator = childVC.coordinator else { return }
+        
+        childDidFinish(String(describing: coordinator))
         
     }
 

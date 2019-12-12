@@ -9,8 +9,7 @@
 import UIKit
 
 class GreetingCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
-    var childCoordinators: [Coordinator] = [Coordinator]()
+    var childCoordinators = [String:Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -23,9 +22,4 @@ class GreetingCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
-    
-    func didFinishGreeting() {
-        parentCoordinator?.childDidFinish(self)
-    }
-    
 }

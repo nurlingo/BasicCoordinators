@@ -10,7 +10,7 @@ import UIKit
 
 class FarewellController: UIViewController, Storyboarded {
     
-    weak var coordinator: FarewellCoordinator?
+    weak var coordinator: Coordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

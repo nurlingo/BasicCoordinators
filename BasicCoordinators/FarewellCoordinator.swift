@@ -9,8 +9,7 @@
 import UIKit
 
 class FarewellCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
-    var childCoordinators: [Coordinator] = [Coordinator]()
+    var childCoordinators = [String:Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -22,10 +21,6 @@ class FarewellCoordinator: Coordinator {
         vc.title = "Farewell"
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func didFinishSayingFarewell() {
-        parentCoordinator?.childDidFinish(self)
     }
     
 }

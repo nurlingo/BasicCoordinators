@@ -10,7 +10,7 @@ import UIKit
 
 class GreetingController: UIViewController, Storyboarded {
     
-    weak var coordinator: GreetingCoordinator?
+    weak var coordinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

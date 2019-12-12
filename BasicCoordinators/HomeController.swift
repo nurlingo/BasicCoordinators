@@ -10,14 +10,16 @@ import UIKit
 
 class HomeController: UIViewController, Storyboarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: Coordinator?
     
     @IBAction func greetTapped(_ sender: Any) {
-        coordinator?.greet()
+        guard let coordinator = coordinator as? MainCoordinator else { return }
+        coordinator.greet()
     }
     
     @IBAction func farewellTapped(_ sender: Any) {
-        coordinator?.sayFarewell()
+        guard let coordinator = coordinator as? MainCoordinator else { return }
+        coordinator.sayFarewell()
     }
     
     override func viewDidLoad() {
