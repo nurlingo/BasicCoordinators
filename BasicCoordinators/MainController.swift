@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UIViewController, Storyboarded {
+class MainController: UIViewController, Storyboarded {
 
     weak var coordinator: Coordinator?
     

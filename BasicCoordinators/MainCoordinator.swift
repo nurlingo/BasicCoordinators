@@ -20,7 +20,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         navigationController.delegate = self
-        let vc = HomeController.instantiate()
+        let vc = MainController.instantiate()
         vc.title = "Home"
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
